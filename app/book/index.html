@@ -1,0 +1,62 @@
+<!-- <h1>Hi {{vm.user.firstName + " "  + vm.user.lastName}}!!</h1> -->
+
+
+
+<div class="jumbotron text-center">
+	<!-- <h1>Get All Books</h1> -->
+	<div class="wrapper">     
+	        <div id="results" class="container">
+	            <div class="row top-x-50">
+	                
+	                <!-- Left Sidebar Section -->
+	                <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ng-scope left-sidebar">Left Sidebar</div> -->
+	                <!-- Left Sidebar Section End-->
+
+	                <!-- Content Section -->
+	                <div ng-repeat="book in vm.books" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+	                    <div class="book-wrapper"> 
+	                        <div class="image-container">
+	                            <a class="book-by-isbn" href="#" get-isbn="1781107041">
+	                                <img ng-src='{{book.Cover_Image}}'>
+	                            </a> 
+	                        </div> 
+	                        <div class="info-container"> 
+	                            <div class="title">
+	                                <a class="book-by-isbn" href="#" get-isbn="1781107041">
+	                                    <span>{{book.Title}}</span>
+	                                </a>
+	                            </div> 
+	                            <div class="author">by 
+	                                <span ng-repeat="author in book.Authors">
+	                                    <!-- {{author}} -->
+	                                    {{author.Name}}{{$last ? '' : 
+	                                        ($index==book.Authors.length-2) ? ' and ' : ', '}}
+	                                </span>
+	                            </div> 
+	                            <div class="category">Category: <span>{{book.Category}}</span>
+	                            </div> 
+	                            <div class="publishedDate">Published Date: 
+	                                <span>{{book.Published_Date}}</span>
+	                            </div> 
+	                        </div> 
+	                        <div class="book-status"> 
+	                        	<!-- Either use vm.IsBookAvailable method/properties for implementing style -->
+	                            <!-- <div ng-class='vm.IsBookAvailable(book.IsAvailable)'> -->
+	                            <div ng-class='(book.IsAvailable) ? "available" : "not-available"'>
+	                                {{book.IsAvailable ? 'Available' : 'Not Available'}}
+	                            </div>
+	                            <div class="my-book">
+	                                <button type="button" ng-disabled='{{!book.IsAvailable}}'
+	                                		ng-click="openModal();"
+	                                        class="btn btn-info navbar-btn">Book
+	                                </button>
+	                            </div>
+	                        </div>
+	                    </div> 
+	                </div>
+	                <!-- Content Section End -->                        
+	            </div>
+	        </div>
+	    </div>
+
+</div>
