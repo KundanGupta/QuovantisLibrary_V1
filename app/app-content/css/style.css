@@ -402,5 +402,17 @@ a:hover {
 
 /* Footer Section End */
 
+.adding-book {
+    margin: auto;
+    width: 650px;
+}
 
-
+.dropdown-menu > div > li > a {
+    clear: both;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    white-space: nowrap;
+}

@@ -12,13 +12,13 @@
     <!-- header -->
     <header>
         <ul class="nav nav-tabs">
-            <!-- <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
-            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
-            <li><a href="/login" target="_self">Logout</a></li> -->
             <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
             <li ng-class="{active: activeTab === 'book'}"><a ui-sref="book">Books</a></li>
             <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
+            <!-- <li ng-show="vm.user.FK_RoleId === 1" ng-class="{active: activeTab === 'admin'}"> -->
+            <li ng-class="{active: activeTab === 'admin'}"><a ui-sref="admin">Admin</a></li>
             <li><a href="/login" target="_self">Logout</a></li>
+            <span>{{vm.user.FK_RoleId}}</span>
         </ul>
         <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
@@ -39,10 +39,14 @@
     <!-- application scripts -->
     <script src="app.js"></script>
     <script src="app-services/user.service.js"></script>
+
     <script src="app-services/flash.service.js"></script>
     <script src="app-services/book.service.js"></script>
+    <script src="app-services/admin/admin.service.js"></script>
+
     <script src="home/index.controller.js"></script>
     <script src="book/index.controller.js"></script>
+    <script src="admin/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
 </body>
 </html>

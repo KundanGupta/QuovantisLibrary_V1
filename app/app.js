@@ -31,6 +31,13 @@
                 controller: 'Book.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'book' }
+            })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: 'admin/index.html',
+                controller: 'Admin.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'admin' }
             });
     }
 
