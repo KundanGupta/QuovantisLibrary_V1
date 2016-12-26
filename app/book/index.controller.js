@@ -18,9 +18,6 @@
                 vm.books = books;
             });
         }
-
-
-
         // Private Methods
         vm.IsBookAvailable= function(isAvailable){
             return (isAvailable) ? 'available' : 'not-available';

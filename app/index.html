@@ -2,16 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MEAN Stack User Registration and Login Example Application</title>
-
+    <title>User Registration</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="app-content/app.css" rel="stylesheet" />
+    <link href="app-content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app-content/css/style.css" rel="stylesheet" />
 </head>
-<body class="container">
+<body class="">
+<div id="wrapper">
     <!-- header -->
-    <header>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -21,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
+          <a class="navbar-brand" href="#">Quo-Lib</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -39,7 +37,6 @@
     <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
         </div>
-    </header>
 
     <!-- main -->
     <div class="container">
@@ -48,12 +45,16 @@
     
 
     <!-- footer -->
-    <footer></footer>
-
+    <footer id="footer"></footer>
+</div>
     <!-- external scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app-content/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    
+   <!--  <script src="app-content/js/ng-file-upload-shim.js"></script>
+    <script src="app-content/js/ng-file-upload.min.js"></script> -->
 
     <!-- application scripts -->
     <script src="app.js"></script>
